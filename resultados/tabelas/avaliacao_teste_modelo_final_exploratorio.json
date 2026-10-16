@@ -1,0 +1,19 @@
+{
+  "conjunto": "teste",
+  "modelo": "modelos/mlp_final_treino_validacao.npz",
+  "sha256_modelo": "1e9be3266dc52cf147cfffb7ea752b95abf9a7529d45a30e73340b07c8b11dbd",
+  "classes": [
+    "stratus",
+    "cumulus",
+    "cirrus",
+    "cumulonimbus"
+  ],
+  "total": 114,
+  "acertos": 54,
+  "acuracia": 0.47368421052631576,
+  "perda_entropia_cruzada": 1.1589962244033813,
+  "precisao_macro": 0.40294763376158726,
+  "recall_macro": 0.44855547678128316,
+  "f1_macro": 0.4185463370347091,
+  "observacao": "Resultado exploratório: o conjunto de teste já foi acessado na avaliação do modelo anterior; não é um novo teste independente."
+}

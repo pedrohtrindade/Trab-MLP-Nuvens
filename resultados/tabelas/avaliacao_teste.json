@@ -1,0 +1,18 @@
+{
+  "conjunto": "teste",
+  "modelo": "modelos/mlp_execucao_05.npz",
+  "sha256_modelo": "531be6a6501079f7458524e30b3f148cade6666a5e5e39c725faa01d623c1e2c",
+  "classes": [
+    "stratus",
+    "cumulus",
+    "cirrus",
+    "cumulonimbus"
+  ],
+  "total": 114,
+  "acertos": 55,
+  "acuracia": 0.4824561403508772,
+  "perda_entropia_cruzada": 1.1991938352584839,
+  "precisao_macro": 0.4313194444444445,
+  "recall_macro": 0.44756095159320963,
+  "f1_macro": 0.43221662693641344
+}

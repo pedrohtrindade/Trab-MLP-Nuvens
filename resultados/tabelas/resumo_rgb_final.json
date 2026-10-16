@@ -1,0 +1,22 @@
+{
+  "modelo": "modelos/mlp_rgb_final.npz",
+  "sha256_modelo": "f152453ef9ab768a46f46d5457ed3f174d687d485302d9ad780bc66475b59797",
+  "preprocessamento": "RGB 32x32 normalizado em [0,1]",
+  "aumento_treino": "espelhamento horizontal",
+  "arquitetura": [
+    3072,
+    256,
+    64,
+    4
+  ],
+  "amostras_treino": 527,
+  "amostras_validacao": 113,
+  "amostras_com_aumento": 1280,
+  "epocas": 94,
+  "lote": 32,
+  "taxa_aprendizado": 0.003,
+  "semente": 42,
+  "criterio_previo": "94 epocas escolhidas pela acuracia da validacao RGB",
+  "acertos_validacao_modelo_previo": 59,
+  "total_validacao_modelo_previo": 113
+}

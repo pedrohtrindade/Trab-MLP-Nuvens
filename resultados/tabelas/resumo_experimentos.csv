@@ -1,0 +1,7 @@
+execucao,camadas_intermediarias,neuronios,taxa_aprendizado,lote,epocas_max,epocas_executadas,melhor_epoca,perda_validacao,acuracia_validacao,acertos_validacao,total_validacao,semente,modelo,historico,log
+01,2,256-64,0.003,32,180,180,176,1.17439603805542,0.45132743362831856,51,113,42,modelos/mlp_execucao_01.npz,resultados/tabelas/historico_execucao_01.csv,resultados/tabelas/log_execucao_01.txt
+02,2,256-64,0.002,32,250,250,249,1.1760674715042114,0.46017699115044247,52,113,42,modelos/mlp_execucao_02.npz,resultados/tabelas/historico_execucao_02.csv,
+03,2,256-64,0.002,32,350,350,331,1.170441746711731,0.4778761061946903,54,113,42,modelos/mlp_execucao_03.npz,resultados/tabelas/historico_execucao_03.csv,resultados/tabelas/log_execucao_03.txt
+04,2,256-64,0.003,32,350,229,204,1.1695128679275513,0.46017699115044247,52,113,42,modelos/mlp_execucao_04.npz,resultados/tabelas/historico_execucao_04.csv,resultados/tabelas/log_execucao_04.txt
+05,2,256-64,0.003,16,250,137,112,1.1640465259552002,0.46017699115044247,52,113,42,modelos/mlp_execucao_05.npz,resultados/tabelas/historico_execucao_05.csv,resultados/tabelas/log_execucao_05.txt
+06,2,256-64,0.003,64,250,211,204,1.1941262483596802,0.46017699115044247,52,113,42,modelos/mlp_execucao_06.npz,resultados/tabelas/historico_execucao_06.csv,resultados/tabelas/log_execucao_06.txt

@@ -1,0 +1,22 @@
+{
+  "conjunto": "validacao",
+  "arquitetura": [
+    1024,
+    256,
+    64,
+    4
+  ],
+  "aumento_treino": "espelhamento horizontal",
+  "criterio_selecao": "maior acuracia; empate pela menor perda",
+  "taxa_aprendizado": 0.003,
+  "lote": 32,
+  "semente": 42,
+  "epocas_executadas": 142,
+  "melhor_epoca": 102,
+  "total_validacao": 113,
+  "acertos_validacao": 58,
+  "acuracia_validacao": 0.5132743362831859,
+  "perda_validacao": 1.1824800968170166,
+  "modelo": "modelos/mlp_melhorado_validacao.npz",
+  "sha256_modelo": "e652fc41e27b06c39babbcbd7ab6a8534906fac1c424a35ed0c69a173ea7327a"
+}

@@ -1,0 +1,21 @@
+{
+  "modelo": "modelos/mlp_textura_final.npz",
+  "sha256_modelo": "baa81bed6fa4f91784fa9481ae15bbf629196dbb0fd216a30489b0761f4b37a0",
+  "entrada": "RGB 32x32 + HOG 144 + histograma RGB 24 + RGB reduzido 16x16 768",
+  "arquitetura": [
+    936,
+    256,
+    64,
+    4
+  ],
+  "amostras_treino": 527,
+  "amostras_validacao": 113,
+  "amostras_com_espelhamento": 1280,
+  "epocas": 74,
+  "lote": 32,
+  "taxa_aprendizado": 0.003,
+  "semente": 42,
+  "criterio_previo": "74 epocas escolhidas pela acuracia da validacao",
+  "acertos_validacao_modelo_previo": 61,
+  "total_validacao_modelo_previo": 113
+}

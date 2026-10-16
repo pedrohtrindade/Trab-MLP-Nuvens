@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.py[cod]
+.vscode/
+
+dataset/original/
+dataset/processado/*
+!dataset/processado/.gitkeep
+
+imagens_teste/*
+!imagens_teste/.gitkeep

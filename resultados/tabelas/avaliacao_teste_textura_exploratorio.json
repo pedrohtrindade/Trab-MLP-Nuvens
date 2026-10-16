@@ -1,0 +1,19 @@
+{
+  "conjunto": "teste",
+  "modelo": "modelos/mlp_textura_final.npz",
+  "sha256_modelo": "baa81bed6fa4f91784fa9481ae15bbf629196dbb0fd216a30489b0761f4b37a0",
+  "classes": [
+    "stratus",
+    "cumulus",
+    "cirrus",
+    "cumulonimbus"
+  ],
+  "total": 114,
+  "acertos": 60,
+  "acuracia": 0.5263157894736842,
+  "perda_entropia_cruzada": 1.1278331279754639,
+  "precisao_macro": 0.4994589842429161,
+  "recall_macro": 0.49711489227618255,
+  "f1_macro": 0.48330136826159414,
+  "observacao": "Resultado exploratório: o conjunto de teste já foi acessado em avaliações anteriores; não é um novo teste independente."
+}

@@ -1,0 +1,19 @@
+{
+  "conjunto": "teste",
+  "modelo": "modelos/mlp_rgb_final.npz",
+  "sha256_modelo": "f152453ef9ab768a46f46d5457ed3f174d687d485302d9ad780bc66475b59797",
+  "classes": [
+    "stratus",
+    "cumulus",
+    "cirrus",
+    "cumulonimbus"
+  ],
+  "total": 114,
+  "acertos": 57,
+  "acuracia": 0.5,
+  "perda_entropia_cruzada": 1.1694852113723755,
+  "precisao_macro": 0.45841929809321114,
+  "recall_macro": 0.47681082358501714,
+  "f1_macro": 0.4510762002558557,
+  "observacao": "Resultado exploratório: o conjunto de teste já foi acessado na avaliação de modelos anteriores; não é um novo teste independente."
+}

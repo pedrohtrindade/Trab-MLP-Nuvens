@@ -1,0 +1,21 @@
+{
+  "modelo_principal": "modelos/mlp_final_treino_validacao.npz",
+  "sha256_modelo": "1e9be3266dc52cf147cfffb7ea752b95abf9a7529d45a30e73340b07c8b11dbd",
+  "arquitetura": [
+    1024,
+    256,
+    64,
+    4
+  ],
+  "amostras_originais_treino": 527,
+  "amostras_originais_validacao": 113,
+  "amostras_com_espelhamento": 1280,
+  "epocas": 102,
+  "lote": 32,
+  "taxa_aprendizado": 0.003,
+  "semente": 42,
+  "criterio_previo": "102 epocas selecionadas pela acuracia da validacao sem treino conjunto",
+  "acertos_validacao_modelo_previo": 58,
+  "total_validacao_modelo_previo": 113,
+  "historico": "resultados/tabelas/historico_final.csv"
+}
