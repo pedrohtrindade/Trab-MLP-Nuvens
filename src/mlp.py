@@ -1,19 +1,11 @@
-"""MLP clássica com propagação direta e Backpropagation em NumPy.
-
-Convenção: cada linha de X representa uma imagem; as colunas são os pixels.
-Cada camada usa A @ W + b; as ocultas aplicam ReLU e a saída, Softmax.
-"""
-
 import numpy as np
-
-
 def relu(z):
-    """Mantém valores positivos e troca valores negativos por zero."""
+  
     return np.maximum(0, z)
 
 
 def softmax(logits):
-    """Converte pontuações de cada linha em probabilidades estáveis."""
+    
     logits = np.asarray(logits)
     if logits.ndim != 2 or logits.shape[1] == 0:
         raise ValueError("logits deve ter formato (amostras, classes)")
@@ -24,7 +16,7 @@ def softmax(logits):
 
 
 class MLP:
-    """Rede totalmente conectada: ReLU nas ocultas e Softmax na saída."""
+   
 
     def __init__(self, n_entradas=1024, camadas_ocultas=(128, 64),
                  n_saidas=4, semente=42):
@@ -49,11 +41,7 @@ class MLP:
             self.bias.append(np.zeros((1, saida), dtype=np.float32))
 
     def forward(self, X, retornar_cache=False):
-        """Retorna probabilidades (amostras, classes) e, opcionalmente, cache.
-
-        O cache contém ativações e valores antes das ativações para calcular
-        os gradientes por Backpropagation.
-        """
+      
         X = np.asarray(X, dtype=np.float32)
         if X.ndim != 2 or X.shape[1] != self.tamanhos[0]:
             raise ValueError(f"X deve ter formato (amostras, {self.tamanhos[0]})")
@@ -90,7 +78,7 @@ class MLP:
         return y
 
     def entropia_cruzada(self, logits, y):
-        """Perda média calculada por log-sum-exp, sem log(0) nem overflow."""
+       
         logits = np.asarray(logits)
         if logits.ndim != 2 or logits.shape[0] == 0 or logits.shape[1] != self.tamanhos[-1]:
             raise ValueError("logits deve ter formato (amostras, classes)")
@@ -102,12 +90,12 @@ class MLP:
         return float(np.mean(log_soma_exp - logits[np.arange(len(y)), y]))
 
     def perda(self, X, y):
-        """Calcula a entropia cruzada média de um conjunto de exemplos."""
+        
         _, cache = self.forward(X, retornar_cache=True)
         return self.entropia_cruzada(cache["pre_ativacoes"][-1], y)
 
     def backward(self, cache, y):
-        """Devolve os gradientes de cada matriz de pesos e vetor de bias."""
+       
         ativacoes = cache["ativacoes"]
         pre_ativacoes = cache["pre_ativacoes"]
         n_amostras = ativacoes[0].shape[0]
@@ -130,7 +118,7 @@ class MLP:
         return grad_pesos, grad_bias
 
     def atualizar(self, grad_pesos, grad_bias, taxa_aprendizado):
-        """Aplica um passo de descida do gradiente em todos os parâmetros."""
+       
         if not np.isfinite(taxa_aprendizado) or taxa_aprendizado <= 0:
             raise ValueError("A taxa de aprendizado deve ser positiva e finita")
         if len(grad_pesos) != len(self.pesos) or len(grad_bias) != len(self.bias):
@@ -142,7 +130,7 @@ class MLP:
             self.bias[indice] -= taxa_aprendizado * grad_bias[indice]
 
     def salvar(self, caminho):
-        """Grava arquitetura e parâmetros em um arquivo NumPy comprimido."""
+       
         conteudo = {"tamanhos": np.asarray(self.tamanhos, dtype=np.int64)}
         for indice, (pesos, bias) in enumerate(zip(self.pesos, self.bias)):
             conteudo[f"pesos_{indice}"] = pesos
@@ -151,7 +139,7 @@ class MLP:
 
     @classmethod
     def carregar(cls, caminho):
-        """Reconstrói uma MLP anteriormente salva por salvar()."""
+       
         with np.load(caminho, allow_pickle=False) as dados:
             tamanhos = tuple(int(n) for n in dados["tamanhos"])
             if len(tamanhos) < 2:
